@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/comment?useSSL=false&useUnicode=true&characterEncoding=utf8
+    username: ENC(kr0RaMQHJBNPRiysr2/XgQ==)
+    password: ENC(Ux61oQ3v8LUniAkBdGXCOg==)
+
+jasypt:
+  encryptor:
+    #\u52A0\u89E3\u5BC6\u7684\u5BC6\u7801
+    password: atpingan
+    #jasypt\u9ED8\u8BA4\u66F4\u6539\u4E86\u7B97\u6CD5\uFF0C\u5982\u679C\u4E0D\u6307\u5B9A\u90A3\u4E48\u4F1A\u62A5\u9519\uFF1Afailed to bind properties under 'spring.datasource.druid.password' to java.lang.String
+    #\u89E3\u51B3\u529E\u6CD5\uFF1A\u2460\u628A\u7248\u672C\u964D\u52302.x\u2461\u6307\u5B9A\u52A0\u5BC6\u65B9\u6CD5\uFF0C\u5982\u4E0B
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
